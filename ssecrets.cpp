@@ -50,7 +50,7 @@ bn_t *ssecrets_calc_secret(bn_t **x, bn_t **s, u32 cnt, bn_t *N)
 
 	bn_t *res = BN_INIT(N->n), *t = BN_INIT(N->n), *a = BN_INIT(N->n), *b = BN_INIT(N->n);
 
-	//Compute secret by using Lagrage polynomial interpolation algorithm for x = 0.
+	//Compute secret by using Lagrange polynomial interpolation algorithm for x = 0.
 	//s = \sum s_i \prod_{j \ne i} (-x_j)(x_i - x_j)^{-1} \mod N
 	for(i = 0; i < cnt; i++)
 	{
